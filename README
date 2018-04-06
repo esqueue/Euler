@@ -1,4 +1,6 @@
-# Euler
-Euler's Problems
+sum=0
+for i in range(1000):
+    if (i%3==0) or (i%5==0):
+        sum+=i
 
-Solutions to Project Euler problems, in Python.
+print (sum)
