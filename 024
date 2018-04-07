@@ -1,0 +1,34 @@
+num=[0,1,2,3,4,5,6,7,8,9]
+
+lexi=[num]
+
+def nextLexi(num):
+    
+    # Find largest i such that num[i-1] < num[i]    
+    i=len(num)-1
+    while i>0 and num[i-1]>num[i]:
+        i-=1
+    if i==0:
+        return num
+        
+    # Find largest j such that j >= i and num[j] > num[i-1]
+    j=len(num)-1
+    while num[j]<=num[i-1]:
+        j-=1
+    
+    # Swap num[j] and num[i-1]
+    num[j], num[i-1] = num[i-1], num[j]
+    
+    # Reverse num[i:]
+    num[i:]=num[len(num)-1 : i-1 : -1]
+    
+    return num
+    
+for i in range(999999):
+    num=nextLexi(num)
+
+final=''
+for i in num:
+    final+=str(i)
+
+print (final)
