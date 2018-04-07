@@ -1,0 +1,19 @@
+def pc(n):
+    if n == 1: return False
+    elif n == 2: return True
+    else:
+        i=2
+        while i<=(n/2):
+            check=n%i
+            if check == 0: return False; break
+            i=i+1
+    
+        return True
+        
+store=[2]
+i=3
+while len(store)<10001:
+    if pc(i) == True: store.append(i)
+    i=i+1
+    
+print store[-1]
