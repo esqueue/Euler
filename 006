@@ -1,0 +1,8 @@
+store=range(1,101)
+storesq=range(1,101)
+for i in store: storesq[i-1]=storesq[i-1]*storesq[i-1]
+diff=sum(store)*sum(store)-sum(storesq)
+
+print sum(store)*sum(store)
+print sum(storesq)
+print diff
