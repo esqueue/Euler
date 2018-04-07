@@ -1,0 +1,26 @@
+#finds the number of divisors of a number n
+def num_div(n):
+    count=2 # accounts for 'n' and '1'
+    i=2
+    while(i**2 < n):
+        if(n%i==0):
+            count+=2
+        i+=1
+    count+=(1 if i**2==n else 0)
+    return count 
+
+#finds the first triangular number with more than n divisors
+def find_t_num(n):
+    check=0
+    t_num=0
+    i=1
+
+    while check == 0:
+        t_num = t_num + i
+        i = i + 1
+        m = num_div(t_num)
+        if m > n: check=1
+        
+    return t_num
+
+print find_t_num(500)
