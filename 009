@@ -1,0 +1,22 @@
+import math
+import numpy
+
+def py_trip(n):
+#finds a Pythagorean triple which adds up to n
+    a=1.0
+    b=1.0
+    while a<n:
+        while b<n:
+            C=a*a+b*b
+            c=math.sqrt(C)
+            if a+b+c==n: return [a, b, c]
+            elif a+b+c>n: break
+            else: b=b+1
+                
+        a=a+1
+        b=a
+        
+    return None
+    
+print (py_trip(1000))
+print (numpy.prod(py_trip(1000)))
