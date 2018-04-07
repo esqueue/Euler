@@ -1,0 +1,10 @@
+i=2
+prev=1
+fib=1
+lim=100
+
+while len(str(fib))<1000:
+    prev, fib = fib, fib+prev
+    i+=1
+
+print(i)
