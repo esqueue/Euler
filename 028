@@ -1,0 +1,9 @@
+digit = 1
+total = digit
+
+for i in range(2, 1002, 2):
+    for j in range(4):
+        digit += i
+        total += digit
+        
+print (total)
