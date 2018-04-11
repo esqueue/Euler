@@ -1,0 +1,16 @@
+all_same_type = 8
+other_combi = 0
+
+for a in range(2):
+    for b in range(4):
+        for c in range(10):
+            for d in range(20):
+                for e in range(40):
+                    for f in range(100):
+                        if (100*a + 50*b + 20*c + 10*d + 5*e  + 2*f) <= 200:
+                            other_combi += 1
+                        else:
+                            break
+
+# Subtract 1 as the first run of the loop has only 1c coins                           
+print (all_same_type + other_combi - 1)
