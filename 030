@@ -1,0 +1,19 @@
+# largest = 9**5
+# for i in range(1, 11):
+#     print ('9'*i, largest*i)
+
+# Set upper limit to 999999 as numbers larger than this will definitely contain more digits than the sum of the fifth powers of their individual digits
+limit = 1000000
+total = 0
+
+for i in range(2, limit):
+    number = str(i)
+    j=0
+    
+    for k in number:
+        j += int(k)**5
+    
+    if i == j:
+        total += i
+        
+print (total)
