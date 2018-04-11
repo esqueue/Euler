@@ -1,0 +1,8 @@
+power_list = []
+
+for a in range(2, 101):
+    for b in range(2, 101):
+        power_list.append(a**b)
+
+power_list_unique = list(set(power_list))
+print (len(power_list_unique))
